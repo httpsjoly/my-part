@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+.showcase-header {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 40px;
+  z-index: 99;
+  font-size: 32px;
+  opacity: 1;
+  font-family: "Zen Dots", cursive;
+  font-size: 32px;
+  color: rgb(197, 226, 217);
+}
+
+.showcase {
+  background-color: #000;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+.showcase-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.showcase::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  box-shadow: inset 0 0 500px #000;
+}
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../slider-car/light.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -65px;
+  animation: f-light 3s ease-in-out infinite;
+}
+
+.showcase-content_wrapper {
+  position: relative;
+  z-index: 99999;
+  height: 100%;
+  padding: 120px 0;
+}
+.showcase-content_wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../slider-car/glow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: f-glow 2s ease-in-out infinite;
+}
+
+.showcase-cars {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  opacity: 0.9;
+}
+.showcase-cars li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.showcase-cars li:hover {
+  transform: translateY(-15px);
+  opacity: 1;
+}
+.showcase-cars li img {
+  max-width: 400px;
+}
+
+@keyframes f-light {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes f-glow {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+@keyframes f-light {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes f-glow {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: .2;
+  }
+}
